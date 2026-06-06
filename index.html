@@ -1,57 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STEEVE - Portfolio</title>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-    body{padding:40px 20px;max-width:900px;margin:auto;line-height:1.6}
-    h1{font-size:2.5rem;margin-bottom:5px}
-    h2{margin-top:40px;margin-bottom:15px;font-size:1.5rem}
-    .card{background:#f3f3f3;padding:20px;border-radius:8px;margin:10px 0}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-    @media(max-width:600px){.grid{grid-template-columns:1fr}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tcheugni Steeve | Développeur Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#2563eb;
+  --dark:#1e293b;
+  --gray:#f1f5f9;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  color:var(--dark);
+  line-height:1.7;
+}
+.container{max-width:1000px;margin:auto;padding:60px 20px}
+header{text-align:center;margin-bottom:80px}
+.photo{
+  width:180px;height:180px;border-radius:50%;
+  object-fit:cover;border:5px solid var(--primary);
+  box-shadow:0 10px 30px rgba(37,99,235,0.2);
+  margin-bottom:25px;
+}
+h1{font-size:3rem;font-weight:700;margin-bottom:10px}
+.subtitle{color:#64748b;font-size:1.2rem;margin-bottom:5px}
+section{margin-bottom:70px}
+h2{
+  font-size:2rem;margin-bottom:30px;
+  border-left:4px solid var(--primary);
+  padding-left:15px;
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.card{
+  background:var(--gray);padding:30px;border-radius:12px;
+  transition:0.3s;border-top:3px solid transparent;
+}
+.card:hover{
+  transform:translateY(-5px);
+  border-top:3px solid var(--primary);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+.skills{display:flex;gap:15px;flex-wrap:wrap}
+.skill{
+  background:var(--primary);color:white;
+  padding:8px 20px;border-radius:25px;font-weight:600
+}
+a{color:var(--primary);text-decoration:none;font-weight:600}
+a:hover{text-decoration:underline}
+footer{text-align:center;padding:40px 0;color:#94a3b8;border-top:1px solid #e2e8f0;margin-top:60px}
+</style>
 </head>
 <body>
-<img src="steeve.jpg" alt="Photo de Steeve" class="photo">
+<div class="container">
+  <header>
+    <img src="steeve.jpg" alt="Tcheugni Steeve" class="photo">
+    <h1>TCHEUGNI STEEVE</h1>
+    <p class="subtitle">Développeur Web & UI/UX Designer</p>
+    <p>Étudiant en Informatique</p>
+  </header>
 
-<h1>MON PORTFOLIO</h1>
-<p>Développeur web & UI/UX Designer</p>
-<p><b>STEEVE</b><br>ETUDIANT INFORMATIQUE</p>
-  <h1>MON PORTFOLIO</h1>
-  <p>Développeur web & UI/UX Designer</p>
-  <p><b>STEEVE</b><br>ETUDIANT INFORMATIQUE</p>
+  <section>
+    <h2>À Propos</h2>
+    <p>Étudiant passionné en informatique avec un fort intérêt pour le développement web moderne et le design d'interfaces utilisateur intuitives. Je transforme les idées en expériences digitales propres et performantes.</p>
+  </section>
 
-  <h2>A PROPOS</h2>
-  <p>étudiant en informatique passionné par le developpement web et le design ui/UX</p>
-
-  <h2>COMPETENCES</h2>
-  <p>HTML<br>CSS<br>JAVASCRIPT</p>
-
-  <h2>PROJETS</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>TASK MANAGER</h3>
-      <p>application de gestion des taches quotidiennes</p>
+  <section>
+    <h2>Compétences</h2>
+    <div class="skills">
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Figma</span>
+      <span class="skill">Git/GitHub</span>
     </div>
-    <div class="card">
-      <h3>e-commerce</h3>
-      <p>site e-commerce créé avec html,css,javascript</p>
-    </div>
-  </div>
+  </section>
 
-  <h2>CONTACT</h2>
-  <div class="grid">
-    <div class="card">
-      <b>Email</b><br>
-      <a href="mailto:tcheugnisteeve@gmail.com">tcheugnisteeve@gmail.com</a>
+  <section>
+    <h2>Projets</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Task Manager</h3>
+        <p>Application web pour gérer les tâches quotidiennes avec stockage local. Interface moderne et responsive.</p>
+        <br><a href="#">Voir le projet →</a>
+      </div>
+      <div class="card">
+        <h3>Site E-commerce</h3>
+        <p>Boutique en ligne complète HTML/CSS/JS avec panier dynamique et design mobile-first.</p>
+        <br><a href="#">Voir le projet →</a>
+      </div>
     </div>
-    <div class="card">
-      <b>telephone</b><br>
-      <a href="tel:+237681334128">+237681334128</a>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="grid">
+      <div class="card">
+        <b>📧 Email</b><br>
+        <a href="mailto:tcheugnisteeve@gmail.com">tcheugnisteeve@gmail.com</a>
+      </div>
+      <div class="card">
+        <b>📱 Téléphone</b><br>
+        <a href="tel:+237681331428">+237 6 81 33 14 28</a>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    © 2026 Tcheugni Steeve - Portfolio
+  </footer>
+</div>
 </body>
 </html>
